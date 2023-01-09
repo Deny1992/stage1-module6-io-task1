@@ -16,9 +16,9 @@ public class FileReader {
                 result.add(strs[1]);
             }
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+
         } catch (IOException e) {
-            throw new RuntimeException(e);
+
         }
 
         String name = result.get(0);
