@@ -15,7 +15,7 @@ public class FileReader {
                 result.add(strs[1]);
             }
         }catch (IOException e) {
-            return null;
+            return new Profile();
         }
 
         String name = result.get(0);
