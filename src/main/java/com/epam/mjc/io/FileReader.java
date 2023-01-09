@@ -15,7 +15,7 @@ public class FileReader {
                 result.add(strs[1]);
             }
         }catch (IOException e) {
-            System.out.println("Something went wrong");
+            return null;
         }
 
         String name = result.get(0);
