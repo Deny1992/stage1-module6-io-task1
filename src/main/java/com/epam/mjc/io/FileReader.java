@@ -2,7 +2,6 @@ package com.epam.mjc.io;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 
@@ -15,10 +14,8 @@ public class FileReader {
                 String[] strs = reader.readLine().split(" ");
                 result.add(strs[1]);
             }
-        } catch (FileNotFoundException e) {
-
-        } catch (IOException e) {
-
+        }catch (IOException e) {
+            System.out.println("Something went wrong");
         }
 
         String name = result.get(0);
@@ -26,8 +23,6 @@ public class FileReader {
         String email = result.get(2);
         Long phone = Long.parseLong(result.get(3));
 
-        Profile profile = new Profile(name, age, email, phone);
-
-        return  profile;
+        return  new Profile(name, age, email, phone);
     }
 }
